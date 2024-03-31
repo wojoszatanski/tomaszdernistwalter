@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html lang="pl-PL">
+<head>
+    <title>Kurs - Taktyki antyterrorystów CS2</title>
+    <link rel="icon" href="favicon.ico"/>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-storage.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="index.html" class="logo">Tomasz "Dernist" Walter</a>
+            <p style="visibility: hidden;"> 
+                Nie patrz chuju na mój kod 
+            </p>
+            <p class="logged-text" id="user"></p>
+            <div id="loggedOutContent" style="display: none; position: relative;">
+                <a href="logowanie.html" id="loginLink">Zaloguj się</a>
+            </div>
+            <div id="loggedInContent" style="display: none; position: relative;">
+                <img id="profilePicDisplay" width="46" height="46" style="border-radius: 50%; margin-left: 10px;">
+            </div>
+            <input id="toggle" type="checkbox"/>
+            <label for="toggle" class="hamburger">
+                <div class="top-bun"></div>
+                <div class="meat"></div>
+                <div class="bottom-bun"></div>
+            </label>
+            <div class="nav">
+                <div class="nav-wrapper">
+                    <nav>
+                        <a href="index.html">Strona główna</a><br>
+                        <a href="index.html#kursy">Kursy</a><br>
+                        <a href="absolwenci.html">Galeria absolwentów</a><br>
+                        <a href="muzyka.html">Moja muzyka</a><br>
+                        <a href="https://www.youtube.com/@dernistdfghf2602">YouTube</a><br>
+                        <a href="index.html#yt">Analizy meczów</a><br>
+                        <a href="logowanie.html">Zaloguj się</a><br>
+                        <a href="konto.html">Zarządzanie Kontem</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+		<div class="content">
+            <h1>Kurs - Taktyki antyterrorystów CS2</h1>
+            <p>W tym filmie znany i doświadczony trener CS2 Tomasz "Dernist" Walter opowiada o taktykach antyterrorystów. Po ukończeniu kursu i rozwiązaniu quizu można otrzymać certyfikat, który należy wydrukować we własnym zakresie.</p>
+            <video id="videoPlayer" width="800" height="600" controls class="player">
+                <source src="antyterror.mp4" type="video/mp4">
+                Nie udało się załadować filmu.
+            </video>
+            <p>Po obejrzeniu rozwiąż quiz wciskając przycisk poniżej:</p>
+            <a href="quizantyterror.html"><button>Rozwiąż quiz</button></a>
+            <br>
+            <br>
+            <div class="line"></div>
+            <footer>
+                <p class="footer">&copy; 2024 Tomasz "Dernist" Walter. Wszelkie prawa zastrzeżone.</p>
+            </footer>
+        </div>
+    </div>
+<script src="app.js"></script>
+<script src="hamburgermenu.js"></script>
+<script src="video.js"></script>
+</body>
+</html>
