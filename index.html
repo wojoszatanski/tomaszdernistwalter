@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<html lang="pl-PL">
+<head>
+    <title>Tomasz "Dernist" Walter</title>
+    <link rel="icon" href="favicon.ico"/>
+    <meta property="og:title" content="Tomasz &#34;Dernist&#34; Walter"/>
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tomaszdernistwalter.000webhostapp.com/">
+    <meta property="og:image" content="https://tomaszdernistwalter.000webhostapp.com/bannernainnestrony.png"/>
+    <meta property="og:description" content="Na tej stronie znajdziesz najlepsze kursy internetowe z CS2, prowadzone przez znanego i doświadczonego gracza oraz trenera Tomasza &#34;Dernist&#34; Waltera, ale także jego muzykę pod pseudonimem Lobotomek. Naucz się podstawowych i zaawansowanych technik gry, takich jak strzelanie, ruch, taktyka, komunikacja i wiele więcej. Zdobądź przewagę nad swoimi przeciwnikami i podnieś swój poziom gry."/>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-storage.js"></script>
+    <script src="https://cdn.gravitec.net/storage/c08301c406b1ac6365d328a0547a37d7/client.js" async></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="index.html" class="logo">Tomasz "Dernist" Walter</a>
+            <p style="visibility: hidden;"> 
+                Nie patrz chuju na mój kod 
+            </p>
+            <p style="position: relative;" class="logged-text" id="user"></p>
+            <div id="loggedOutContent" style="display: none; position: relative;">
+                <a href="logowanie.html" id="loginLink">Zaloguj się</a>
+            </div>
+            <div id="loggedInContent" style="display: none; position: relative;">
+                <img id="profilePicDisplay" width="46" height="46" style="border-radius: 50%; margin-left: 10px;">
+            </div>
+            <input id="toggle" type="checkbox"/>
+            <label for="toggle" class="hamburger">
+                <div class="top-bun"></div>
+                <div class="meat"></div>
+                <div class="bottom-bun"></div>
+            </label>
+            <div class="nav">
+                <div class="nav-wrapper">
+                    <nav>
+                        <a href="index.html">Strona główna</a><br>
+                        <a href="index.html#kursy">Kursy</a><br>
+                        <a href="absolwenci.html">Galeria absolwentów</a><br>
+                        <a href="muzyka.html">Moja muzyka</a><br>
+                        <a href="https://www.youtube.com/@dernistdfghf2602">YouTube</a><br>
+                        <a href="index.html#yt">Analizy meczów</a><br>
+                        <a href="logowanie.html">Zaloguj się</a><br>
+                        <a href="konto.html">Zarządzanie Kontem</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+			<img src="tlo.png" alt="Zdjęcie" class="img">
+            <h2>Nowy singiel!</h2>
+            🎵 <b>Lobotomek</b> prezentuje swój najnowszy singiel - <b>"Mocna Wiśnia"</b>! 🎵
+            <br>
+            Tomasz "Dernist" Walter, znany i doświadczony gracz oraz trener CS2, zaskakuje nas swoją muzyczną stroną. Pod pseudonimem Lobotomek, Tomasz przenosi swoją pasję i precyzję z gry na muzyczne tory.
+            <br>
+            "Mocna Wiśnia" to utwór, który opisuje miłość do jabola, przedstawiając go jako kobietę. To nie jest tylko piosenka, to jest opowieść, która bierze nas na emocjonalną podróż przez świat Tomasza "Dernist" Waltera.
+            <br>
+            Zanurz się w głębokich dźwiękach "Mocnej Wiśni" i pozwól, aby Lobotomek poprowadził Cię przez tę muzyczną podróż. Ta piosenka to dowód na to, że Tomasz "Dernist" Walter nie tylko zna się na grach, ale również potrafi stworzyć porywające dźwięki.
+            <br>
+            Posłuchaj singla już teraz na YouTube lub mojej stronie w zakładce "Moja muzyka". Oczekuj na pełny album <b>"Lobotomia Mixtape"</b> w lutym!
+            <br>
+            Nie przegap "Mocnej Wiśni" od Lobotomka! 🎶
+            <br>
+            <br>
+            <center><iframe width="560" height="315" src="https://www.youtube.com/embed/RsC6Eiiz5uw?si=iydm11p5Pwfl6QAP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center>
+            <h2 id="kursy">Kursy</h2>
+            <p>Na tej stronie znajdziesz najlepsze kursy internetowe z CS2, prowadzone przez znanego i doświadczonego gracza i trenera Tomasza "Dernist" Waltera. Naucz się podstawowych i zaawansowanych technik gry, takich jak strzelanie, ruch, taktyka, komunikacja i wiele więcej. Zdobądź przewagę nad swoimi przeciwnikami i podnieś swój poziom gry.</p>
+            <div class="course">
+                <img src="csgo1.jpg" alt="csgo1">
+                <div class="course-info">
+                    <div class="course-title">Podstawy gry CS2</div>
+                    <div class="course-desc">W tym kursie nauczysz się podstawowych zasad i mechanik gry w CS2, takich jak celowanie, strzelanie, ruch, granaty, ekonomia i wiele więcej. Poznasz również najpopularniejsze mapy i ich ustawienia.</div>
+                    <div class="course-price">20$</div>
+                    <a href="#" class="course-button">Kup teraz</a>
+                </div>
+            </div>
+            <div class="course">
+                <img src="csgo2.jpg" alt="csgo2">
+                <div class="course-info">
+                    <div class="course-title">Zaawansowane techniki gry CS2</div>
+                    <div class="course-desc">W tym kursie nauczysz się zaawansowanych technik gry w CS2, takich jak spray control, peeking, prefire, crosshair placement, clutching i wiele więcej. Poznasz również zaawansowane taktyki i strategie gry zespołowej.</div>
+                    <div class="course-price">20$</div>
+                    <a href="#" class="course-button">Kup teraz</a>
+                </div>
+            </div>
+            <div class="course">
+                <img src="csgo3.jpg" alt="csgo3">
+                <div class="course-info">
+					<div class="course-title">Taktyki antyterrorystów CS2</div>
+                    <div class="course-desc">W tym kursie nauczysz się taktyk antyterrorystów w CS2, takich jak defuse, retake, entry, hold i wiele więcej. Poznasz również najlepsze pozycje, granaty i bronie dla antyterrorystów na różnych mapach.</div>
+                    <div class="course-price">20$</div>
+                    <a href="kupowanieantyterror.html" class="course-button">Kup teraz</a>
+                </div>
+            </div>
+            <div class="course">
+                <img src="csgo4.jpg" alt="csgo4">
+                <div class="course-info">
+                    <div class="course-title">Skiny CS2</div>
+                    <div class="course-desc">W tym kursie nauczysz się wszystkiego o skinach w CS2, takich jak ich rodzaje, jakość, rzadkość, cena i wartość. Poznasz również sposoby zdobywania, kupowania, sprzedawania i wymieniania skinów. Dowiesz się również jak oceniać i kolekcjonować skiny.</div>
+                    <div class="course-price">20$</div>
+                    <a href="#" class="course-button">Kup teraz</a>
+                </div>
+            </div>
+            <div class="course">
+                <img src="csgo5.jpg" alt="csgo5">
+                <div class="course-info">
+					<div class="course-title">Indywidualny coaching z Dernistem</div>
+                    <div class="course-desc">W tym kursie otrzymasz indywidualny coaching od Tomasza "Dernist" Waltera, jednego z najlepszych graczy i trenerów CS2 w Polsce. Dernist przeanalizuje twoją grę, wskaże twoje błędy i słabe punkty, oraz pomoże ci je poprawić. Dostosuje trening do twojego poziomu i celów.</div>
+                    <div class="course-price">100$</div>
+                    <a href="kupowaniechoaching.html" class="course-button">Kup teraz</a>
+                </div>
+            </div>
+            <h2 id="yt">Analizy meczów</h2>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/11Cqky5wd6w?si=XZQPIoP3ANkyo0DS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/IJeG7tjxOUE?si=GvGCxlOOF9xXNa9r" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/Y8BBSIRNXDs?si=stkIQ0NLR7bafVm8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/lk4GvELF47Y?si=kbktMtDUhS_P2o2v" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <br>
+            <br>
+            <div class="line"></div>
+                <footer>
+                    <p class="footer">&copy; 2024 Tomasz "Dernist" Walter. Wszelkie prawa zastrzeżone.</p>
+                </footer>
+        </div>
+    </div>
+<script src="app.js"></script>
+<script src="hamburgermenu.js"></script>
+</body>
+</html>
